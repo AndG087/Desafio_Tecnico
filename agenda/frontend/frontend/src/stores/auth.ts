@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import axios from '@/services/http'
 
-const DEV_BYPASS = import.meta.env.DEV // true no `vite dev`
+const DEV_BYPASS = true // true no `vite dev`
 
 export const useAuth = defineStore('auth', {
   state: () => ({
