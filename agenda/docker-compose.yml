@@ -1,0 +1,16 @@
+services:
+  api:
+    build: ./backend
+    ports:
+      - "3000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ConnectionStrings__Default: "Data Source=/app/agenda.db"
+      Jwt__Issuer: "AgendaApi"
+      Jwt__Audience: "AgendaClient"
+      Jwt__Secret: "troque-por-uma-chave-segura-com-32+caracteres"
+    volumes:
+      - api_data:/app # persiste agenda.db
+
+volumes:
+  api_data:

@@ -8,7 +8,7 @@ namespace Agenda.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-[Authorize]
+// [Authorize]
 public class ContactsController(AgendaDbContext db) : ControllerBase
 {
     [HttpGet]
